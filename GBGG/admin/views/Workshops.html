@@ -1,0 +1,43 @@
+﻿<div class="main-page">
+    <div class="panel-group tool-tips widget-shadow form" id="accordion" role="tablist" aria-multiselectable="true">
+        <h4 class="title2">
+            Workshop Details :
+            <div class="pull-right">
+                <button class="btn button btn-primary" ng-click="AddWorkshop()">Add</button>
+            </div>
+        </h4>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h4 class="panel-title">
+                    All Workshops
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <div class="form-body">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Venu</th>
+                                <th>isLive</th>
+                                <th>Created</th>
+                                <th>Last Activity</th>
+                            </tr>
+                            <tr ng-repeat="p in WorkshopsList">
+                                <td>{{ p.WorkshopName}}</td>
+                                <td>{{p.WorkshopStatus}}</td>
+                                <td>{{p.WorkshopDate}}</td>
+                                <td>{{p.Venue}}</td>
+                                <td>{{p.IsLive}}</td>
+                                <td>{{p.CreatedDate}}</td>
+                                <td>{{p.LastActivityDate}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

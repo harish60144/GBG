@@ -1,0 +1,64 @@
+body{
+	color:#595d64;
+}
+#logo img {
+    width: 200px;
+    height: 172px;
+	margin:20px 0px;
+}
+h2{
+	background:#eaeaea;
+	text-align:center;
+	padding:12px 6px 12px 6px;
+	margin-bottom: 20px;    
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 30px;
+    color: #595d64;
+}
+h2 span{
+	font-weight:normal;
+	font-size:14px;
+	text-decoration:underline;
+	cursor:pointer;
+}
+h5{
+	font-weight:normal;
+}
+.gutter{
+	margin:20px 0px;
+}
+#secondparentinfo{
+	height:0;
+	width:0;
+	visibility:hidden;
+	overflow:hidden;
+}
+#formdetails,#referalcondition,
+#formdetails.parent #referalinfo,#medicalnomessage,
+#formdetails.medical #submitapplication,#formdetails.parent #submitapplication,#subscriptionform2,#prev{
+	display:none;
+}
+#formdetails.parent,#formdetails.medical{
+	display:block;
+}
+#next,#submitapplication{
+	margin-bottom:20px;
+}
+.calender{
+	margin-top:10px;
+}
+@media screen and (max-width: 576px) {
+	.form-check.form-check-inline{
+		width:100%;
+		border: 1px solid #cfd4d8;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+		background-color: #eaeaea;
+		color: #595d64;
+		padding:5px;
+		margin-bottom:10px;
+	}
+}

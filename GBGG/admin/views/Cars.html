@@ -1,0 +1,38 @@
+﻿<div class="main-page">
+    <div class="panel-group tool-tips widget-shadow form" id="accordion" role="tablist" aria-multiselectable="true">
+        <h4 class="title2">
+            Car Details :
+            <div class="pull-right">
+                <button class="btn button btn-primary" ng-click="AddNewCar();">Add</button>
+            </div>
+        </h4>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h4 class="panel-title">
+                    All Cars
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <div class="form-body">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Id</th>
+                                <th>Purpose</th>
+                                <th>CreatedDate</th>
+                                <th>Location</th>
+                      
+                            </tr>
+                            <tr ng-repeat="p in CarsList">
+                                <td>{{ p.CarId}}</td>
+                                <td>{{p.Purpose}}</td>
+                                <td>{{p.CreatedDate}}</td>
+                                <td>{{p.Location}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

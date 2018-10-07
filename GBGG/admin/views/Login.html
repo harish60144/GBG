@@ -1,0 +1,25 @@
+﻿<div style="height:100%;">
+    <div class="main-page login-page ">
+        <h2 class="title1">Login</h2>
+        <div class="widget-shadow">
+            <div class="login-body">
+                <input type="text" class="user" name="email" placeholder="Enter Your Email" required="" ng-model="usrname">
+                <input type="password" name="password" class="lock" placeholder="Password" required="" ng-model="usrPwd">
+                <div class="forgot-grid">
+                    <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Remember me</label>
+                    <div class="forgot">
+                        <a href="#">forgot password?</a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <input type="submit" name="Sign In" ng-click="Signin(usrname,usrPwd);" value="Sign In">
+                <div class="registration">
+                    Don't have an account ?
+                    <a class="" href="signup.html">
+                        Create an account
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

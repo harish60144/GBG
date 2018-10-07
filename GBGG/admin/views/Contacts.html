@@ -1,0 +1,41 @@
+﻿<div class="main-page">
+    <div class="panel-group tool-tips widget-shadow form" id="accordion" role="tablist" aria-multiselectable="true">
+        <h4 class="title2">
+            Contact Details :
+            <div class="pull-right">
+                <button class="btn button btn-primary">Add</button>
+            </div>
+        </h4>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h4 class="panel-title">
+                    All Contacts
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <div class="form-body">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Contact Id</th>
+                                <th>FirstName</th>
+                                <th>LastName</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>CreatedDate</th>                                
+                            </tr>
+                            <tr ng-repeat="p in ContactList">
+                                <td>{{ p.PersonId}}</td>
+                                <td>{{p.FirstName}}</td>
+                                <td>{{p.LastName}}</td>
+                                <td>{{p.Email}}</td>
+                                <td>{{p.PhoneNumber}}</td>
+                                <td>{{p.CreatedDate}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1011 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Gobaby</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="css/gobaby.css" rel="stylesheet" />
+</head>
+<body ng-app="gobabygo">
+    <div class="container">
+        <div id='logo' class='text-center'>
+            <img src='images/logo.png' alt='logo' />
+        </div>
+        <form action='#' method='post'>
+            <div id='subscriptionform' class='clearfix row'>
+                <div class="topcontent text-center col-12">
+                    <h1>GoBabyGo! Request a Car - Child Application Form</h1>
+                    <p>GoBabyGo! is a global program aimed to improving the lives of those with mobility impairments.  We modify ride-on-cars to suit the unique mobility needs of each child, primarily at workshops all around the world!			</p>
+                    <iframe width="285" height="200" src="//www.youtube.com/embed/U-NE7B0RTdA" frameborder="0" allowfullscreen=""></iframe>
+                    <p><span style="font-size: 18px;"></span>Please answer the questions below so we can fit your child with an awesome GoBabyGo Car! You will need a measuring tape and your child nearby - the application requires measurements so we can fit them in the correct car.  Any child with a mobility impairment is eligible to apply.  There is no age restriction; however, the largest car we currently modify accommodates children around 4ft tall. This application is only the first step - it is not confirmation of eligibility to receive a car. If you have any questions, please email workshops@gobabyglobal.com. Thank you! :)	</p>
+                    <h2>Let's Begin!</h2>
+                </div>
+                <div id='referchild' class='form-row row'>
+                    <div class="form-group col-12">
+                        <h5>
+                            I'd like to refer an awesome kid for a GoBabyGo car! I am the Child's
+                        </h5>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="parentorgardion" id="parentorgardion" value="Parent/Legal Guardian">
+                            <label class="form-check-label" for="parentorgardion">Parent/Legal Guardian</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="parentorgardion" id="medicalprofessional" value="option2">
+                            <label class="form-check-label" for="medicalprofessional">Medical Professional</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div id='referalcondition' class='form-row row'>
+                    <div class="form-group col-12">
+                        <h5>
+                            Is the Parent/Guardian aware that you are referring their Child for a GoBabyGo car?
+                        </h5>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="referchild" value="yes" id='referchildyes'>
+                            <label class="form-check-label" for='referchildyes'>Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="referchild" value="no" id='referchildno'>
+                            <label class="form-check-label" for='referchildno'>No</label>
+                        </div>
+                    </div>
+                </div>
+                <p id='medicalnomessage'>
+                    You cannot proceed further unless the family is aware of this application. If you have additional questions please email workshops@gobabyglobal.com
+                </p>
+                <div id='formdetails' class='clearfix'>
+                    <p>
+                        Great! Please fill out the application below to the best of your ability. You may save your progress and resume later using the link located at the bottom of this page. After submitting the application, a member of our team will contact you to continue the application process.
+                    </p>
+
+                    <div id='referalinfo' class='form-row row'>
+                        <div class="form-group col-12">
+                            <h2>Referrer's Information</h2>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Referrer's Name</label>
+                            <div class='form-row'>
+                                <div class="form-group col-12 col-sm-5">
+                                    <input type="text" class="form-control" ng-model="enquiry.rFirstName" />
+                                    <small class="form-text text-muted">First Name</small>
+                                </div>
+                                <div class="form-group col-12 col-sm-5">
+                                    <input type="text" class="form-control" ng-model="enquiry.rLastName" />
+                                    <small class="form-text text-muted">Last Name</small>
+                                </div>
+                                <div class="form-group col-12 col-sm-2">
+                                    <input type="text" class="form-control" ng-model="enquiry.suffix" />
+                                    <small class="form-text text-muted">Suffix</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Referrer's Relation to Child</label>
+                            <input type="text" class="form-control" ng-model="enquiry.rRelation" />
+                        </div>
+                        <div class="form-group col-12">
+                            <label>Referrer's Occupation</label>
+                            <select class="form-control" ng-model="enquiry.rOccuption">
+                                <option value="">&nbsp;</option>
+                                <option value="Social Worker">Social Worker</option>
+                                <option value="Child Life Specialist">Child Life Specialist</option>
+                                <option value="Physical Therapist">Physical Therapist</option>
+                                <option value="Occupational Therapist">Occupational Therapist</option>
+                                <option value="Nurse">Nurse</option>
+                                <option value="Physician">Physician</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Place of Employment</label>
+                            <input type="text" class="form-control" ng-model="enquiry.rWorkPlace" />
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Zip Code</label>
+                            <input type="text" class="form-control" ng-model="enquiry.rzip" />
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Referrer's Email Address</label>
+                            <input type="text" class="form-control" ng-model="enquiry.rEmail" />
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Referrer's Phone Number</label>
+                            <div class='form-row'>
+                                <div class="form-group col-12 col-sm-8">
+                                    <input type="text" class="form-control" ng-model="enquiry.rPhoneNo" />
+                                </div>
+                                <div class="form-group col-12 col-sm-4">
+                                    <select class="form-control" ng-model="enquiry.rPhoneType">
+                                        <option value="Mobile">Mobile</option>
+                                        <option value="Home">Home</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-12">
+                            <label>How did you hear about the GoBabyGo program?</label>
+                            <input type="text" class="form-control" ng-model="enquiry.hearreason" />
+                        </div>
+                    </div>
+
+                    <div id='primaryinfo' class='form-row'>
+                        <div class="form-group col-12">
+
+                            <h2>Family's Information</h2>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Parent/Guardian's Name</label>
+                            <div class='form-row'>
+                                <div class="form-group col-12 col-sm-6">
+                                    <input type="text" class="form-control" ng-model="enquiry.g1FirstName" />
+                                    <small class="form-text text-muted">First Name</small>
+                                </div>
+                                <div class="form-group col-12 col-sm-6">
+                                    <input type="text" class="form-control" ng-model="enquiry.g1LastName" />
+                                    <small class="form-text text-muted">Last Name</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Parent/Guardian's Relation to Child</label>
+                            <select class="form-control" ng-model="enquiry.g1Relation">
+                                <option value="">&nbsp;</option>
+                                <option value="Father">Father</option>
+                                <option value="Mother">Mother</option>
+                                <option value="Sister">Sister</option>
+                                <option value="Brother">Brother</option>
+                                <option value="Guardian">Guardian</option>
+                                <option value="Grandfather">Grandfather</option>
+                                <option value="Grandmother">Grandmother</option>
+                                <option value="Stepfather">Stepfather</option>
+                                <option value="Stepmother">Stepmother</option>
+                                <option value="Stepsister">Stepsister</option>
+                                <option value="Stepbrother">Stepbrother</option>
+                                <option value="Foster Father">Foster Father</option>
+                                <option value="Foster Mother">Foster Mother</option>
+                                <option value="Foster Sister">Foster Sister</option>
+                                <option value="Foster Brother">Foster Brother</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Parent/Guardian's Email Address</label>
+                            <input type="email" class="form-control" ng-model="enquiry.g1Email" />
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Parent/Guardian's Phone Number</label>
+                            <div class='form-row'>
+                                <div class="form-group col-12 col-sm-6">
+                                    <input type="text" class="form-control" ng-model="enquiry.g1PhoneNo" />
+                                </div>
+                                <div class="form-group col-12 col-sm-6">
+                                    <select class="form-control" ng-model="enquiry.g1PhoneType">
+                                        <option value="Mobile">Mobile</option>
+                                        <option value="Home">Home</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-12">
+                            <label>Parent/Guardian's Residential Address</label>
+                            <input type="text" class="form-control" ng-model="enquiry.g1Address" />
+                        </div>
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" ng-model="enquiry.g1Address1" />
+                        </div>
+                        <div class="form-group col-12">
+                            <div class='form-row'>
+                                <div class="form-group col-12 col-sm-7">
+                                    <input type="text" class="form-control" ng-model="enquiry.g1City" />
+                                    <small class="form-text text-muted">City</small>
+                                </div>
+                                <div class="form-group col-12 col-sm-3">
+                                    <select name='state' class="form-control" ng-model="enquiry.g1State">
+                                        <option value="">&nbsp;</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="DC">District of Columbia</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="AA">Armed Forces (the) Americas</option>
+                                        <option value="AE">Armed Forces Europe</option>
+                                        <option value="AP">Armed Forces Pacific</option>
+                                        <option value="APO">Army Post Office (U.S. Army and U.S. Air Force)</option>
+                                        <option value="FPO">Fleet Post Office (U.S. Navy and U.S. Marine Corps)</option>
+                                    </select>
+                                    <small class="form-text text-muted">State</small>
+                                </div>
+                                <div class="form-group col-12 col-sm-2">
+                                    <input type="text" class="form-control" ng-model="enquiry.g1Pin" />
+                                    <small class="form-text text-muted">Zip Code</small>
+                                </div>
+                                <div class="form-group col-12">
+                                    <label>How did you hear about the GoBabyGo program?</label>
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-12" id='addparent'>
+                            <div>
+                                <label>Would you like to add a 2nd Parent/Guardian?</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="add" id="add" value="add">
+                                <label class="form-check-label" for="add">Add</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="add" id="no" value="no">
+                                <label class="form-check-label" for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='secondparentinfo' class='form-row'>
+                        <div class="form-group col-12 col-sm-6">
+                            <label> 2nd Parent/Guardian's Name</label>
+                            <div class='form-row'>
+                                <div class="form-group col-12 col-sm-6">
+                                    <input type="text" class="form-control" ng-model="enquiry.g2FirstName" />
+                                    <small class="form-text text-muted">First Name</small>
+                                </div>
+                                <div class="form-group col-12 col-sm-6">
+                                    <input type="text" class="form-control" ng-model="enquiry.g2LastName" />
+                                    <small class="form-text text-muted">Last Name</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>2nd Parent/Guardian's Relation to Child</label>
+                            <select class="form-control" ng-model="enquiry.g2Relation">
+                                <option value="">&nbsp;</option>
+                                <option value="Father">Father</option>
+                                <option value="Mother">Mother</option>
+                                <option value="Sister">Sister</option>
+                                <option value="Brother">Brother</option>
+                                <option value="Guardian">Guardian</option>
+                                <option value="Grandfather">Grandfather</option>
+                                <option value="Grandmother">Grandmother</option>
+                                <option value="Stepfather">Stepfather</option>
+                                <option value="Stepmother">Stepmother</option>
+                                <option value="Stepsister">Stepsister</option>
+                                <option value="Stepbrother">Stepbrother</option>
+                                <option value="Foster Father">Foster Father</option>
+                                <option value="Foster Mother">Foster Mother</option>
+                                <option value="Foster Sister">Foster Sister</option>
+                                <option value="Foster Brother">Foster Brother</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>2nd Parent/Guardian's Email Address</label>
+                            <input type="email" class="form-control" ng-model="enquiry.g2Email" />
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>2nd Parent/Guardian's Phone Number</label>
+                            <div class='form-row'>
+                                <div class="form-group col-12 col-sm-6">
+                                    <input type="text" class="form-control" ng-model="enquiry.g2PhoneNo" />
+                                </div>
+                                <div class="form-group col-12 col-sm-6">
+                                    <select class="form-control" ng-model="enquiry.g2phonetype">
+                                        <option value=" mobile">
+                                            Mobile
+                                        </option>
+                                        <option value="Home">Home</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-12">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="sameasparent" ng-model="enquiry.isSameasFirsh" />
+                                <label class="custom-control-label" for="sameasparent">Same as Parent/Guardian's Residential Address above?</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-12">
+                            <label>2nd Parent/Guardian's Residential Address</label>
+                            <input type="text" class="form-control" ng-model="enquiry.g2Address" />
+                        </div>
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" ng-model="enquiry.g2Address1" />
+                        </div>
+                        <div class="form-group col-12">
+                            <div class='form-row'>
+                                <div class="form-group col-12 col-sm-7">
+                                    <input type="text" class="form-control" ng-model="enquiry.g2City" />
+                                    <small class="form-text text-muted">City</small>
+                                </div>
+                                <div class="form-group col-12 col-sm-3">
+                                    <select class="form-control" ng-model="enquiry.g2State">
+                                        <option value="">&nbsp;</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="DC">District of Columbia</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="AA">Armed Forces (the) Americas</option>
+                                        <option value="AE">Armed Forces Europe</option>
+                                        <option value="AP">Armed Forces Pacific</option>
+                                        <option value="APO">Army Post Office (U.S. Army and U.S. Air Force)</option>
+                                        <option value="FPO">Fleet Post Office (U.S. Navy and U.S. Marine Corps)</option>
+                                    </select>
+                                    <small class="form-text text-muted">State</small>
+                                </div>
+                                <div class="form-group col-12 col-sm-2">
+                                    <input type="text" class="form-control" ng-model="enquiry.g2Pin" />
+                                    <small class="form-text text-muted">Zip Code</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Child's Information</h2>
+                    <div id='childinfo' class='form-row'>
+                        <div class="form-group col-12">
+                            <label>Child's Name</label>
+                            <div class='form-row'>
+                                <div class="form-group col-12 col-sm-5">
+                                    <input type="text" class="form-control" ng-model="enquiry.fname" />
+                                    <small class="form-text text-muted">First Name</small>
+                                </div>
+                                <div class="form-group col-12 col-sm-2">
+                                    <input type="text" class="form-control" ng-model="enquiry.mname" />
+                                    <small class="form-text text-muted">Middle Name</small>
+                                </div>
+                                <div class="form-group col-12 col-sm-5">
+                                    <input type="text" class="form-control" ng-model="enquiry.lname" />
+                                    <small class="form-text text-muted">Last Name</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-12">
+                            <div class='form-row'>
+                                <div class="form-group col-12">
+                                    <label>Child's Gender</label>
+                                    <select name="childgender" size="1" class="form-control" ng-model="enquiry.gender">
+                                        <option value="">&nbsp;</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-12">
+                                    <label>Child's Birthday</label>
+                                    <div class='form-row'>
+                                        <div class="form-group col-6 col-sm-4">
+                                            <select name="month" size="1" class="form-control" id='month' ng-model="enquiry.dobMonth">
+                                                <option value=""> </option>
+                                                <option value="January">January</option>
+                                                <option value="February">February</option>
+                                                <option value="March">March</option>
+                                                <option value="April">April</option>
+                                                <option value="May">May</option>
+                                                <option value="June">June</option>
+                                                <option value="July">July</option>
+                                                <option value="August">August</option>
+                                                <option value="September">September</option>
+                                                <option value="October">October</option>
+                                                <option value="November">November</option>
+                                                <option value="December">December</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-2 col-sm-2">
+                                            <select name="date" size="1" class="form-control" id='date' ng-model="enquiry.dobDay">
+                                                <option value=""> </option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-2 col-sm-2">
+                                            <select name="year" size="1" class="form-control" id='year' ng-model="enquiry.dobYear">
+                                                <option value=""> </option>
+                                                <option value="2003">2003</option>
+                                                <option value="2004">2004</option>
+                                                <option value="2005">2005</option>
+                                                <option value="2006">2006</option>
+                                                <option value="2007">2007</option>
+                                                <option value="2008">2008</option>
+                                                <option value="2009">2009</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2018">2018</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-2 col-sm-4">
+                                            <img src='images/calendar.png' alt='calender' class='calender' />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="sameasparentaddress" ng-model="enquiry.isSameasParents" />
+                                        <label class="custom-control-label" for="sameasparentaddress">Same as Parent/Guardian's Residential Address above?</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12">
+                                    <label>Child's Residential Address</label>
+                                    <input type="text" class="form-control" ng-model="enquiry.address1" />
+                                </div>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control" ng-model="enquiry.address2" />
+                                </div>
+                                <div class="form-group col-12">
+                                    <div class='form-row'>
+                                        <div class="form-group col-12 col-sm-7">
+                                            <input type="text" class="form-control" ng-model="enquiry.city" />
+                                            <small class="form-text text-muted">City</small>
+                                        </div>
+                                        <div class="form-group col-12 col-sm-3">
+                                            <select class="form-control" ng-model="enquiry.cstate">
+                                                <option value="">&nbsp;</option>
+                                                <option value="AL">Alabama</option>
+                                                <option value="AK">Alaska</option>
+                                                <option value="AZ">Arizona</option>
+                                                <option value="AR">Arkansas</option>
+                                                <option value="CA">California</option>
+                                                <option value="CO">Colorado</option>
+                                                <option value="CT">Connecticut</option>
+                                                <option value="DE">Delaware</option>
+                                                <option value="DC">District of Columbia</option>
+                                                <option value="FL">Florida</option>
+                                                <option value="GA">Georgia</option>
+                                                <option value="HI">Hawaii</option>
+                                                <option value="ID">Idaho</option>
+                                                <option value="IL">Illinois</option>
+                                                <option value="IN">Indiana</option>
+                                                <option value="IA">Iowa</option>
+                                                <option value="KS">Kansas</option>
+                                                <option value="KY">Kentucky</option>
+                                                <option value="LA">Louisiana</option>
+                                                <option value="ME">Maine</option>
+                                                <option value="MD">Maryland</option>
+                                                <option value="MA">Massachusetts</option>
+                                                <option value="MI">Michigan</option>
+                                                <option value="MN">Minnesota</option>
+                                                <option value="MS">Mississippi</option>
+                                                <option value="MO">Missouri</option>
+                                                <option value="MT">Montana</option>
+                                                <option value="NE">Nebraska</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="NH">New Hampshire</option>
+                                                <option value="NJ">New Jersey</option>
+                                                <option value="NM">New Mexico</option>
+                                                <option value="NY">New York</option>
+                                                <option value="NC">North Carolina</option>
+                                                <option value="ND">North Dakota</option>
+                                                <option value="OH">Ohio</option>
+                                                <option value="OK">Oklahoma</option>
+                                                <option value="OR">Oregon</option>
+                                                <option value="PA">Pennsylvania</option>
+                                                <option value="PR">Puerto Rico</option>
+                                                <option value="RI">Rhode Island</option>
+                                                <option value="SC">South Carolina</option>
+                                                <option value="SD">South Dakota</option>
+                                                <option value="TN">Tennessee</option>
+                                                <option value="TX">Texas</option>
+                                                <option value="UT">Utah</option>
+                                                <option value="VT">Vermont</option>
+                                                <option value="VA">Virginia</option>
+                                                <option value="WA">Washington</option>
+                                                <option value="WV">West Virginia</option>
+                                                <option value="WI">Wisconsin</option>
+                                                <option value="WY">Wyoming</option>
+                                                <option value="AA">Armed Forces (the) Americas</option>
+                                                <option value="AE">Armed Forces Europe</option>
+                                                <option value="AP">Armed Forces Pacific</option>
+                                                <option value="APO">Army Post Office (U.S. Army and U.S. Air Force)</option>
+                                                <option value="FPO">Fleet Post Office (U.S. Navy and U.S. Marine Corps)</option>
+                                            </select>
+                                            <small class="form-text text-muted">State</small>
+                                        </div>
+                                        <div class="form-group col-12 col-sm-2">
+                                            <input type="text" class="form-control" ng-model="enquiry.czip" />
+                                            <small class="form-text text-muted">Zip Code</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Medical Information</h2>
+                    <div id='medicalinfo' class='form-row'>
+                        <div class="form-group col-12">
+                            <label>List any hospitals, clinics, treatment facilities, etc. where your child receives care</label>
+                            <input type="text" class="form-control" ng-model="enquiry.hospitalName" />
+                            <small class="form-text text-muted">example: Children's Hospital of Philadelphia</small>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Primary Diagnosis</label>
+                            <input type="text" class="form-control" ng-model="enquiry.primaryDiagnosis" />
+                            <small class="form-text text-muted">example: Cerebral Palsy</small>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Secondary Diagnosis</label>
+                            <input type="text" class="form-control" ng-model="enquiry.secondaryDiagnosis" />
+                            <small class="form-text text-muted">example: Spastic Diplegia</small>
+                        </div>
+                        <div class="form-group col-12">
+                            <label>List any known allergies that your child has</label>
+                            <input type="text" class="form-control" ng-model="enquiry.allergies" />
+                            <small class="form-text text-muted">example: Latex, Cats, Peanuts</small>
+                        </div>
+                        <div class="form-group col-12">
+                            <label>List any braces, vests, equipment, etc. your child wears</label>
+                            <input type="text" class="form-control" ng-model="enquiry.equipment" />
+                            <small class="form-text text-muted">example: AFO, G tube, Oxygen Tank, Prosthesis</small>
+                        </div>
+                    </div>
+                    <h2><span class='saveandresume' data-toggle="modal" data-target='#saveandresume'>Save and Resume Later</span></h2>
+                    <button id='next' type="button" class="btn btn-secondary float-right">Next</button>
+
+
+                </div>
+            </div>
+            <div id='subscriptionform2' class='clearfix'>
+                <div class="topcontent text-center">
+                    <p>
+                        The following questions may not directly apply to your child because of their unique physical/behavioral characteristics. That's ok! Just include all necessary explanations in the comments and our team will follow up if we have any questions.
+                    </p>
+                    <h2>Leg Measurements</h2>
+                    <p></p>
+                    <p>
+                        Follow the instructions below and take careful measurements of your child, rounding up to the nearest quarter inch. For assistance please email workshops@gobabyglobal.com.
+                    </p>
+                </div>
+                <div class='form-row'>
+                    <div class="form-group col-12 col-sm-6  text-center">
+                        <div><label>Measurement 1</label></div>
+                        <img src='images/mesaurement.png' alt='measurement' />
+                    </div>
+                    <div class="form-group col-12 col-sm-6 ">
+                        <label>Measurement 1: Place your child in a seated position and measure the distance from the bottom of their foot to the top of their knee</label>
+                        <select class="form-control" ng-model="enquiry.measurement1t">
+                            <option value="">&nbsp;</option>
+                            <option value="3.50 inches">3.50 inches</option>
+                            <option value="3.75 inches">3.75 inches</option>
+                            <option value="4.00 inches">4.00 inches</option>
+                            <option value="4.25 inches">4.25 inches</option>
+                            <option value="4.50 inches">4.50 inches</option>
+                            <option value="4.75 inches">4.75 inches</option>
+                            <option value="5.00 inches">5.00 inches</option>
+                            <option value="5.25 inches">5.25 inches</option>
+                            <option value="5.50 inches">5.50 inches</option>
+                            <option value="5.75 inches">5.75 inches</option>
+                            <option value="6.00 inches">6.00 inches</option>
+                            <option value="6.25 inches">6.25 inches</option>
+                            <option value="6.50 inches">6.50 inches</option>
+                            <option value="6.75 inches">6.75 inches</option>
+                            <option value="7.00 inches">7.00 inches</option>
+                            <option value="7.25 inches">7.25 inches</option>
+                            <option value="7.50 inches">7.50 inches</option>
+                            <option value="7.75 inches">7.75 inches</option>
+                            <option value="8.00 inches">8.00 inches</option>
+                            <option value="8.25 inches">8.25 inches</option>
+                            <option value="8.50 inches">8.50 inches</option>
+                            <option value="8.75 inches">8.75 inches</option>
+                            <option value="9.00 inches">9.00 inches</option>
+                            <option value="9.25 inches">9.25 inches</option>
+                            <option value="9.50 inches">9.50 inches</option>
+                            <option value="9.75 inches">9.75 inches</option>
+                            <option value="10.00 inches">10.00 inches</option>
+                            <option value="10.25 inches">10.25 inches</option>
+                            <option value="10.50 inches">10.50 inches</option>
+                            <option value="10.75 inches">10.75 inches</option>
+                            <option value="11.00 inches">11.00 inches</option>
+                            <option value="11.25 inches">11.25 inches</option>
+                            <option value="11.50 inches">11.50 inches</option>
+                            <option value="11.75 inches">11.75 inches</option>
+                            <option value="12.00 inches">12.00 inches</option>
+                            <option value="12.25 inches">12.25 inches</option>
+                            <option value="12.50 inches">12.50 inches</option>
+                            <option value="12.75 inches">12.75 inches</option>
+                            <option value="13.00 inches">13.00 inches</option>
+                            <option value="13.25 inches">13.25 inches</option>
+                            <option value="13.50 inches">13.50 inches</option>
+                            <option value="13.75 inches">13.75 inches</option>
+                            <option value="14.00 inches">14.00 inches</option>
+                            <option value="14.25 inches">14.25 inches</option>
+                            <option value="14.50 inches">14.50 inches</option>
+                            <option value="14.75 inches">14.75 inches</option>
+                            <option value="15.00 inches">15.00 inches</option>
+                            <option value="15.25 inches">15.25 inches</option>
+                            <option value="15.50 inches">15.50 inches</option>
+                            <option value="15.75 inches">15.75 inches</option>
+                            <option value="16.00 inches">16.00 inches</option>
+                        </select>
+                        <small class="form-text text-muted">Take all measurements using INCHES</small>
+                    </div>
+                    <div class="form-group col-12 col-sm-6  text-center">
+                        <div><label>Measurement 2</label></div>
+                        <img src='images/measurment2.png' alt='measurement2' />
+                    </div>
+                    <div class="form-group col-12 col-sm-6 ">
+                        <label>Measurement 2: Place your child in a seated position and measure the distance from the front of their knee to their back</label>
+                        <select class="form-control" ng-model="enquiry.measurement2">
+                            <option value="">&nbsp;</option>
+                            <option value="3.50 inches">3.50 inches</option>
+                            <option value="3.75 inches">3.75 inches</option>
+                            <option value="4.00 inches">4.00 inches</option>
+                            <option value="4.25 inches">4.25 inches</option>
+                            <option value="4.50 inches">4.50 inches</option>
+                            <option value="4.75 inches">4.75 inches</option>
+                            <option value="5.00 inches">5.00 inches</option>
+                            <option value="5.25 inches">5.25 inches</option>
+                            <option value="5.50 inches">5.50 inches</option>
+                            <option value="5.75 inches">5.75 inches</option>
+                            <option value="6.00 inches">6.00 inches</option>
+                            <option value="6.25 inches">6.25 inches</option>
+                            <option value="6.50 inches">6.50 inches</option>
+                            <option value="6.75 inches">6.75 inches</option>
+                            <option value="7.00 inches">7.00 inches</option>
+                            <option value="7.25 inches">7.25 inches</option>
+                            <option value="7.50 inches">7.50 inches</option>
+                            <option value="7.75 inches">7.75 inches</option>
+                            <option value="8.00 inches">8.00 inches</option>
+                            <option value="8.25 inches">8.25 inches</option>
+                            <option value="8.50 inches">8.50 inches</option>
+                            <option value="8.75 inches">8.75 inches</option>
+                            <option value="9.00 inches">9.00 inches</option>
+                            <option value="9.25 inches">9.25 inches</option>
+                            <option value="9.50 inches">9.50 inches</option>
+                            <option value="9.75 inches">9.75 inches</option>
+                            <option value="10.00 inches">10.00 inches</option>
+                            <option value="10.25 inches">10.25 inches</option>
+                            <option value="10.50 inches">10.50 inches</option>
+                            <option value="10.75 inches">10.75 inches</option>
+                            <option value="11.00 inches">11.00 inches</option>
+                            <option value="11.25 inches">11.25 inches</option>
+                            <option value="11.50 inches">11.50 inches</option>
+                            <option value="11.75 inches">11.75 inches</option>
+                            <option value="12.00 inches">12.00 inches</option>
+                            <option value="12.25 inches">12.25 inches</option>
+                            <option value="12.50 inches">12.50 inches</option>
+                            <option value="12.75 inches">12.75 inches</option>
+                            <option value="13.00 inches">13.00 inches</option>
+                            <option value="13.25 inches">13.25 inches</option>
+                            <option value="13.50 inches">13.50 inches</option>
+                            <option value="13.75 inches">13.75 inches</option>
+                            <option value="14.00 inches">14.00 inches</option>
+                            <option value="14.25 inches">14.25 inches</option>
+                            <option value="14.50 inches">14.50 inches</option>
+                            <option value="14.75 inches">14.75 inches</option>
+                            <option value="15.00 inches">15.00 inches</option>
+                            <option value="15.25 inches">15.25 inches</option>
+                            <option value="15.50 inches">15.50 inches</option>
+                            <option value="15.75 inches">15.75 inches</option>
+                            <option value="16.00 inches">16.00 inches</option>
+                        </select>
+                        <small class="form-text text-muted">Take all measurements using INCHES</small>
+                    </div>
+                </div>
+                <h2>Mobility Information</h2>
+                <div class='form-row'>
+                    <div class="form-group col-12">
+                        <div>
+                            <label>
+                                Can your child crawl?
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input" type="radio" name="crawl" value="crawl" id='crawlno' ng-model="enquiry.cancrawl">
+                            <label class="form-check-label" for="crawlno">No</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="crawl" value="crawl" id='crawlyes' ng-model="enquiry.cancrawl">
+                            <label class="form-check-label" for="crawlyes">yes</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-12">
+                        <div>
+                            <label>
+                                Can your child sit independently?
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="dependently" value="0" id='dependently' ng-model="enquiry.cansit">
+                            <label class="form-check-label" for="dependently">No</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="dependently" value="1" id='independently' ng-model="enquiry.cansit">
+                            <label class="form-check-label" for="independently">yes</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-12">
+                        <div>
+                            <label>
+                                Can your child stand?
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="stand" value="0" id='standno' ng-model="enquiry.canstand">
+                            <label class="form-check-label" for="standno">No</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="stand" value="1" id='standyes' ng-model="enquiry.canstand">
+                            <label class="form-check-label" for="standyes">Yes, with Assistance</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="stand" value="2" id='standind' ng-model="enquiry.canstand">
+                            <label class="form-check-label" for="standind">Yes, Independently</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-12">
+                        <div>
+                            <label>
+                                Can your child fully flex/bend their knee?
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="knee" value="0" id='kneeno' ng-model="enquiry.canbendKnee">
+                            <label class="form-check-label" for="kneeno">No</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="knee" value="1" id='kneeyes' ng-model="enquiry.canbendKnee">
+                            <label class="form-check-label" for="kneeyes">Yes, with Assistance</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="knee" value="2" id='kneeind' ng-model="enquiry.canbendKnee">
+                            <label class="form-check-label" for="kneeind">Yes, Independently</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-12">
+                        <div>
+                            <label>
+                                Can your child walk?
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="walk" value="0" id='walkno' ng-model="enquiry.canwalk">
+                            <label class="form-check-label" for="walkno">No</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="walk" value="1" id='walkyes' ng-model="enquiry.canwalk">
+                            <label class="form-check-label" for="walkyes">Yes, with Assistance</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="walk" value="2" id='walkind' ng-model="enquiry.canwalk">
+                            <label class="form-check-label" for="walkind">Yes, Independently</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-12">
+                        <div>
+                            <label>
+                                Does your child have any prior experience driving a GoBabyGo car?
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="drive" value="0" id='driveno' ng-model="enquiry.priorexperience">
+                            <label class="form-check-label" for="driveno">No</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="drive" value="1" id='driveyes' ng-model="enquiry.priorexperience">
+                            <label class="form-check-label" for="driveyes">yes</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-12">
+                        <label>What does your child currently use to move around?</label>
+                        <input type="text" class="form-control" ng-model="enquiry.currentSupportings" />
+                        <small class="form-text text-muted">example: Wheelchair, Gait Trainer, Firefly Upsee</small>
+                    </div>
+                    <div class="form-group col-12 col-sm-6 ">
+                        <div>
+                            <label>
+                                Can your child press buttons or switches?
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="childpress" value="0" id='childpressno' ng-model="enquiry.canpress">
+                            <label class="form-check-label" for="childpressno">No</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="childpress" value="1" id='childpressyes' ng-model="enquiry.canpress">
+                            <label class="form-check-label" for="childpressyes">yes</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-12 col-sm-6 ">
+                        <div>
+                            <label for='file'>
+                                Upload picture of your child
+                            </label>
+                        </div>
+                        <input type="file" class="form-control-file" id="file">
+
+                    </div>
+                    <div class="form-group col-12">
+                        <label>Please tell us a little more about your child. Use this space to explain any further details from above answers. The more information you provide will help us better understand which car and modifications we need to prepare for a great fit!</label>
+                        <textarea class="form-control" rows="5" ng-model="enquiry.aboutChild"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <h2>Additional Information</h2>
+                    </div>
+                    <div class="form-group col-12">
+                        <label>Please tell us a little more about your child. Use this space to explain any further details from above answers. The more information you provide will help us better understand which car and modifications we need to prepare for a great fit!</label>
+                        <input type="text" class="form-control" ng-model="enquiry.addinfo1" />
+                    </div>
+                    <div class="form-group col-12">
+                        <label>Does your child have any social media or online pages (facebook, blog, website, gofundme, news article, etc) describing their life's journey - link below and we'd love to follow along!</label>
+                        <input type="text" class="form-control" ng-model="enquiry.addinfo2" />
+                    </div>
+                    <div class="form-group col-12">
+                        <label>Comments</label>
+                        <textarea class="form-control" rows="5" ng-model="enquiry.addinfo3"></textarea>
+                    </div>
+                    <div class="form-group col-12">
+                        <p>We have the following GoBabyGo! workshops happening soon! Please mark all dates you are able to attend and we will contact you shortly.</p>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="termscondition" ng-model="enquiry.equipment" />
+                            <label class="custom-control-label" for="termscondition">None of these dates work for me! Keep me updated on upcoming workshops in my area!</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id='saveandresume' class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Save and Resume Later</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Are you sure you want to leave this form and resume later?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-info">Save and get link</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='form-row' id='submitapplication'>
+                <div class="col-12">
+                    <h2><span class='saveandresume' data-toggle="modal" data-target='#saveandresume' ng-click="SaveEnquiry();">Save and Resume Later</span></h2>
+                    <button id='prev' type="button" class="btn btn-secondary float-left">Prev</button>
+                    <button type="button" class="btn btn-secondary float-right" ng-click="SubmitEnquiry();">Submit Application</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/gobaby.js"></script>
+</body>
+</html>
